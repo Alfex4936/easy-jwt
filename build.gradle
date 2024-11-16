@@ -1,0 +1,42 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.seok'
+version = '1.0.0'
+
+java {
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-security:3.3.5'
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor:3.3.5'
+    // https://mvnrepository.com/artifact/jakarta.servlet/jakarta.servlet-api
+    implementation 'jakarta.servlet:jakarta.servlet-api:6.1.0'
+
+    implementation 'io.jsonwebtoken:jjwt-api:0.12.6'
+    // https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-impl
+    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.12.6'
+    // https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-gson
+    implementation 'io.jsonwebtoken:jjwt-gson:0.12.6'
+
+
+//    compileOnly 'org.projectlombok:lombok:1.18.36'
+//    annotationProcessor 'org.projectlombok:lombok:1.18.36'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:3.3.5'
+    testImplementation 'org.springframework.security:spring-security-test:6.3.4'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
