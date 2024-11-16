@@ -12,12 +12,22 @@
 
 ## 설치
 
-`build.gradle`에 다음 의존성을 추가하세요:
+다음 의존성을 추가하세요:
 
 ```gradle
 dependencies {
-    implementation 'com.seok:easy-jwt:1.0.0'
+    implementation 'com.github.Alfex4936:easy-jwt:1.0.2'
 }
+```
+
+or
+
+```pom
+<dependency>
+    <groupId>com.github.Alfex4936</groupId>
+    <artifactId>easy-jwt</artifactId>
+    <version>1.0.2</version>
+</dependency>
 ```
 
 ## 구성
