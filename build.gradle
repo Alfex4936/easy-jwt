@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'com.seok'
-version = '1.0.0'
+version = '1.0.1'
 
 java {
     withJavadocJar()
@@ -41,4 +41,15 @@ dependencies {
 
 tasks.named('test') {
     useJUnitPlatform()
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = 'com.seok'
+            artifactId = 'easyjwt'
+            version = '1.0.1'
+            from components.java
+        }
+    }
 }
