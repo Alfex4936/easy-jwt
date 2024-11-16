@@ -1,13 +1,15 @@
 plugins {
     id 'java'
+    id 'maven-publish'
 }
 
 group = 'com.seok'
 version = '1.0.0'
 
 java {
+    withJavadocJar()
+    withSourcesJar()
 }
-
 configurations {
     compileOnly {
         extendsFrom annotationProcessor
